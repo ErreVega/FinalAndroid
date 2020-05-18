@@ -6,17 +6,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
 
-        <item
-            android:id="@+id/nav_test"
-            android:icon="@drawable/ic_list_black_24dp"
-            android:title="Test" />
 
         <item
             android:id="@+id/nav_sql"
             android:icon="@drawable/ic_list_black_24dp"
-            android:title="SQL" />
+            android:title="SQL + listView" />
+
+        <item
+            android:id="@+id/nav_acc"
+            android:icon="@drawable/ic_explore_black_24dp"
+            android:title="Accelerometro" />
+
+        <item
+            android:id="@+id/nav_roomActivity"
+            android:icon="@drawable/ic_details_black_24dp"
+            android:title="Room + Master/detail" />
+
+        <item
+            android:id="@+id/nav_spinnerFragment"
+            android:icon="@drawable/ic_list_black_24dp"
+            android:title="Spinner Operaciones" />
     </group>
 </menu>

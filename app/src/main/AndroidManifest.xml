@@ -12,6 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.room.CocheListActivity"
+            android:label="@string/title_coche_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ui.room.CocheDetailActivity"
+            android:label="@string/title_coche_detail"
+            android:parentActivityName=".ui.room.CocheListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.navdrawer.ui.room.CocheListActivity" />
+        </activity>
+        <activity android:name=".ui.room.RoomActivity" />
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">

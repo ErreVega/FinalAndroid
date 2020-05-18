@@ -2,14 +2,30 @@
     <string name="app_name">Nav drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Ruben Vega</string>
+    <string name="nav_header_subtitle">App</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+
+    <string name="st_coche_id">ID</string>
+    <string name="st_coche_nombre">Nombre</string>
+    <string name="st_coche_puertas">Nº puertas</string>
+    <string name="st_coche_color">Color</string>
+
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+
+    <string-array name="operaciones">
+        <item>Suma</item>
+        <item>Resta</item>
+        <item>Multiplicacion</item>
+        <item>Division</item>
+    </string-array>
 
     <string name="home_second">Home Second</string>
+    <string name="title_coche_list">Coches</string>
+    <string name="title_coche_detail">Coche Detail</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

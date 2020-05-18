@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.navdrawer.BBDD_helper;
 import com.example.navdrawer.EstructuraBD;
@@ -28,7 +29,7 @@ import com.example.navdrawer.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SqliteFrament extends Fragment {
+public class SqliteFrament extends Fragment  {
 
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -182,39 +183,7 @@ public class SqliteFrament extends Fragment {
             @Override
             public void onClick(View v) {
                 vibrator.vibrate(100);
-                SQLiteDatabase db = helper.getReadableDatabase();
-
-                try {
-                    Cursor cursor = db.query(
-                            EstructuraBD.NOMBRE_TABLA,      // The table to query
-                            null,                     // The array of columns to return (pass null to get all)
-                            null,                      // The columns for the WHERE clause
-                            null,                  // The values for the WHERE clause
-                            null,                  // don't group the rows
-                            null,                   // don't filter by row groups
-                            null                    // The sort order
-                    );
-
-                    cursor.moveToFirst();
-
-
-                    List itemIds = new ArrayList<Persona>();
-                    while(!cursor.isAfterLast()) {
-                        Persona item = new Persona(cursor.getInt(0), cursor.getString(1), cursor.getString(2));
-                        itemIds.add(item);
-                        cursor.moveToNext();
-                    }
-
-                    itemIds.forEach(elem -> { System.out.println(elem); });
-
-
-
-//                    textoNombre.setText(cursor.getString(0));
-//                    textoApellido.setText(cursor.getString(1));
-                    cursor.close();
-                } catch (Exception e) {
-                    (Toast.makeText(MainActivity.getInstance(), "No se ha encontrado el registro" , Toast.LENGTH_LONG)).show();
-                }
+                Navigation.findNavController(view).navigate(R.id.action_nav_sql_to_nav_listViewPersonas);
 
             }
         });

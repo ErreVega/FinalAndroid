@@ -30,14 +30,43 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_test"
-        android:name="com.example.navdrawer.ui.test.TestFragment"
-        android:label="fragment_test"
-        tools:layout="@layout/fragment_test" />
-    <fragment
         android:id="@+id/nav_sql"
         android:name="com.example.navdrawer.ui.sqlite.SqliteFrament"
         android:label="SqliteFrament"
-        tools:layout="@layout/fragment_sql" />
+        tools:layout="@layout/fragment_sql" >
+        <action
+            android:id="@+id/action_nav_sql_to_nav_listViewPersonas"
+            app:destination="@id/nav_listViewPersonas" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_spinnerFragment"
+        android:name="com.example.navdrawer.ui.spinner.SpinnerFragment"
+        android:label="spinner_fragment"
+        tools:layout="@layout/spinner_fragment" />
+    <fragment
+        android:id="@+id/nav_listViewPersonas"
+        android:name="com.example.navdrawer.ui.sqlite.ListViewPersonas"
+        android:label="fragment_list_view_personas"
+        tools:layout="@layout/fragment_list_view_personas" >
+        <action
+            android:id="@+id/action_nav_listViewPersonas_pop"
+            app:popUpTo="@id/nav_listViewPersonas"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <activity
+        android:id="@+id/nav_roomActivity"
+        android:name="com.example.navdrawer.ui.room.RoomActivity"
+        android:label="activity_room"
+        tools:layout="@layout/activity_room" />
+    <activity
+        android:id="@+id/cocheListActivity"
+        android:name="com.example.navdrawer.ui.room.CocheListActivity"
+        android:label="activity_coche_list"
+        tools:layout="@layout/activity_coche_list" />
+    <fragment
+        android:id="@+id/nav_acc"
+        android:name="com.example.navdrawer.ui.accelerometro.AccelerometroFragment"
+        android:label="fragment_accelerometro"
+        tools:layout="@layout/fragment_accelerometro" />
 
 </navigation>
